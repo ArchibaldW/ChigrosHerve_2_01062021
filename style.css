@@ -5,3 +5,11 @@ footer{
 footer a{
         display : block;
 }
+
+.fa-star{
+    color : #0065fc;
+}
+
+.star-grey{
+    color : #d9d9d9;
+}
