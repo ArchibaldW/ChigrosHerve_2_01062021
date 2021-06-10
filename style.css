@@ -1,9 +1,23 @@
-footer{
-    width : 100%;
-    background-color: #f2f2f2;
+@font-face {
+    font-family: 'Raleway';
+    src: url('./font/Raleway-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
-footer a{
-        display : block;
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./font/Raleway-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body *{
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6{
+    font-weight: bold;
 }
 
 .fa-star{
@@ -12,4 +26,313 @@ footer a{
 
 .star-grey{
     color : #d9d9d9;
+}
+
+#corps{
+    padding: 50px;
+}
+
+/* BLOC HÉBERGEMENTS/ACTIVITÉS */
+
+#herbergements_activites .container{
+    display: flex;
+    padding: 0;
+}
+
+#hebergements, #populaires{
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+/* BLOC ACTIVITÉ */
+
+#activites{
+    padding: 65px 0 0;
+}
+
+#activites h2{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+#activites a{
+    text-decoration: none;
+    color: black;
+}
+
+#activites .activite_img{
+    border-radius: 15px 15px 0 0;
+}
+
+#activites .activite_txt{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+#activites .container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: none;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#activites .container > div {
+    max-width: 332px;
+    padding: 0 15px;
+}
+
+#activites .container > div:first-child {
+    max-width: 317px;
+    padding: 0 15px 0 0;
+}
+
+#activites .container > div:last-child {
+    max-width: 317px;
+    padding: 0 0 0 15px;
+}
+
+
+
+#activites .container > div:nth-child(1) .activite_img {
+    background-image: url("./imgs/activites/2_large/activite1.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 390px;
+}
+
+#activites .container > div:nth-child(2) > .activite:nth-child(1) .activite_img {
+    background-image: url("./imgs/activites/2_large/activite2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 180px;
+}
+
+#activites .container > div:nth-child(2) > .activite:nth-child(2) .activite_img {
+    background-image: url("./imgs/activites/2_large/activite3.jpg");
+    background-size: cover;
+    height: 110px;
+}
+
+#activites .container > div:nth-child(3) .activite_img {
+    background-image: url("./imgs/activites/2_large/activite4.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 390px;
+}
+
+#activites .container > div:nth-child(4) > .activite:nth-child(1) .activite_img {
+    background-image: url("./imgs/activites/2_large/activite5.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 140px;
+}
+
+#activites .container > div:nth-child(4) > .activite:nth-child(2) .activite_img {
+    background-image: url("./imgs/activites/2_large/activite6.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 153px;
+}
+
+@media (max-width: 991px) {
+    #activites .container{
+        justify-content: space-evenly;
+    }
+    
+    #activites .container > div:nth-child(2n+1) {
+        padding: 0 15px 0 0;
+    }
+
+    #activites .container > div:nth-child(2n) {
+        padding: 0 0 0 15px;
+    }
+
+
+    #activites .container > div:nth-child(1) .activite_img {
+        background-image: url("./imgs/activites/3_medium/activite1.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 390px;
+    }
+    
+    #activites .container > div:nth-child(2) > .activite:nth-child(1) .activite_img {
+        background-image: url("./imgs/activites/3_medium/activite2.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 180px;
+    }
+    
+    #activites .container > div:nth-child(2) > .activite:nth-child(2) .activite_img {
+        background-image: url("./imgs/activites/3_medium/activite3.jpg");
+        background-size: cover;
+        height: 110px;
+    }
+    
+    #activites .container > div:nth-child(3) .activite_img {
+        background-image: url("./imgs/activites/3_medium/activite4.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 390px;
+    }
+    
+    #activites .container > div:nth-child(4) > .activite:nth-child(1) .activite_img {
+        background-image: url("./imgs/activites/3_medium/activite5.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 140px;
+    }
+    
+    #activites .container > div:nth-child(4) > .activite:nth-child(2) .activite_img {
+        background-image: url("./imgs/activites/3_medium/activite6.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 153px;
+    }
+}
+
+@media (max-width: 576px) {
+    #activites .container > div {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    #activites a.activite {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    #activites .container > div:last-child > .activite:last-child{
+        margin-bottom: 0;
+    }
+
+    #activites .container > div:first-child {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    #activites .container > div:last-child {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    #activites .container > div:nth-child(2n+1) {
+        padding: 0;
+    }
+
+    #activites .container > div:nth-child(2n) {
+        padding: 0;
+    }
+
+    #activites .container > div:nth-child(1) .activite_img {
+        background-image: url("./imgs/activites/4_small/activite1.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 134px;
+    }
+    
+    #activites .container > div:nth-child(2) > .activite:nth-child(1) .activite_img {
+        background-image: url("./imgs/activites/4_small/activite2.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 134px;
+    }
+    
+    #activites .container > div:nth-child(2) > .activite:nth-child(2) .activite_img {
+        background-image: url("./imgs/activites/4_small/activite3.jpg");
+        background-size: cover;
+        height: 134px;
+    }
+    
+    #activites .container > div:nth-child(3) .activite_img {
+        background-image: url("./imgs/activites/4_small/activite4.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 134px;
+    }
+    
+    #activites .container > div:nth-child(4) > .activite:nth-child(1) .activite_img {
+        background-image: url("./imgs/activites/4_small/activite5.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 134px;
+    }
+    
+    #activites .container > div:nth-child(4) > .activite:nth-child(2) .activite_img {
+        background-image: url("./imgs/activites/4_small/activite6.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 134px;
+    }
+}
+
+/* BLOC FOOTER */
+footer{
+    width : 100%;
+    background-color: #f2f2f2;
+}
+
+footer h1{
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+footer a{
+    font-size: 12px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+footer a:hover{
+    color: blue;
+}
+
+#footer_container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: none;
+    padding: 50px;
+}
+
+#footer_container > div:nth-child(1) {
+    padding: 0 15px 0 0;
+}
+
+#footer_container > div:nth-child(2) {
+    padding: 0 15px;
+}
+
+#footer_container > div:nth-child(3) {
+    padding: 0 0 0 15px;
+}
+
+@media (max-width: 768px) {
+    #footer_container{
+        max-width: none;
+        padding: 30px 50px;
+    }
+
+    #footer_container > div:nth-child(1) {
+        padding: 0 0 20px 0;
+    }
+    
+    #footer_container > div:nth-child(2) {
+        padding: 20px 0;
+    }
+    
+    #footer_container > div:nth-child(3) {
+        padding: 20px 0 0 0;
+    }
 }
