@@ -12,6 +12,10 @@
     font-style: normal;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
 }
@@ -38,7 +42,7 @@ a{
 }
 
 a:hover{
-    color: blue;
+    color: #0065fc;
 }
 
 .flex{
@@ -46,7 +50,7 @@ a:hover{
 }
 
 #corps{
-    padding: 50px;
+    padding: 17px 50px 50px;
 }
 
 @media (max-width : 991px){
@@ -55,13 +59,241 @@ a:hover{
     }
 }
 
+
+/* BLOC NAV */
+nav {
+    padding: 0 50px;
+    font-size: 12px;
+}
+
+nav > div{
+    display: flex;
+    align-items: center;
+    height: 114px;
+}
+
+nav > div:first-child{
+    flex-grow : 15;
+}
+
+nav > div:first-child img{
+    height: 36px;
+}
+
+nav > div:nth-child(2){
+    order : 3;
+    font-weight: bold;
+    padding: 0 25px;
+}
+
+nav > div:nth-child(2) a{
+    color : #0065fc
+}
+
+nav > div:last-child > a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 25px;
+}
+
+nav > div:last-child > a:hover{
+    box-shadow: 0 2px 0 #0065fc inset;
+}
+
+@media (max-width: 991px){
+    nav {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px){
+    nav {
+        flex-wrap: wrap;
+        padding: 0 0 36px;
+    }
+    nav > div{
+        width : auto;
+    }
+
+    nav > div:first-child{
+        margin-left: 20px;
+    }
+
+    nav > div:nth-child(2){
+        order : 2;
+        font-weight: bold;
+        padding: 0;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+
+    nav > div:last-child{
+        height: 34px;
+        order : 3;
+        width: 100%;
+    }
+
+    nav > div:last-child > a{
+        width: 50%;
+        justify-content: center;
+        box-shadow: 0 -2px 0 #f2f2f2 inset;
+    }
+
+    nav > div:last-child > a:hover{
+        box-shadow: 0 -2px 0 #0065fc inset;
+    }
+}
+
+
 /* BLOC INTRO */
+
+#intro > div:first-child h1{
+    font-size: 16px;
+    margin: 0;
+}
+
+#intro > div:first-child p{
+    font-size: 12px;
+    margin: 16px 0 24px;
+}
+
+@media (max-width: 991px){
+    #intro {
+        padding: 0 20px;
+    }
+}
+
+
+#search{
+    margin-bottom: 24px;
+    max-width: 315px;
+}
+
+#search form{
+    height: 48px;
+    border-radius: 15px;
+    border: 1px solid #f2f2f2;
+}
+
+#search form > div:first-child{
+    height: 50px;
+    border-radius: 15px 0 0 15px;
+    padding: 0 17px 0 17px;
+    background-color: #f2f2f2;
+}
+
+#search form > div:first-child label{
+    align-self: center;
+}
+
+#search form > div:nth-child(2) input{
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#search form > div:last-child button{
+    position: relative;
+    top: -1px;
+    height: 50px;
+    padding-right: 17px;
+    padding-left: 17px;
+    color: white;
+    background-color: #0065fc;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#search form > div:last-child button i{
+    display: none;
+}
+
+@media (max-width : 768px){
+    #search form > div:last-child button span{
+        display: none;
+    }
+
+    #search form > div:last-child button i{
+        display: block;
+    }
+}
+
+#filtres{
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+#filtres > div:first-child{
+    font-weight: bold;
+    align-self: center;
+    margin-right: 32px;
+    font-size: 13px;
+}
+
+#filtres > div:last-child{
+    flex-wrap: wrap;
+}
+
+.filtre a{
+    height: 46px;
+    border: solid 2px #d9d9d9;
+    border-radius: 25px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 24px;
+    transition: 0.5s;
+    
+}
+
+.filtre a:hover{
+    background-color: #0065fc;
+    color: white;
+}
+
+
+
+.filtre a > div:first-child{
+    background-color: #deebff;
+    color: #0065fc;
+    border-radius: 50%;
+    min-width: 50px;
+    height: 50px;
+    position: relative;
+    right: 2px;
+    bottom: 2px;
+    display: flex;
+}
+
+.filtre a > div:first-child i{
+    align-self: center;
+    margin: auto;
+    font-size: 18px;
+}
+
+.filtre a > div:last-child{
+    align-self: center;
+    font-weight: bold;
+    margin: 0 22px 0 13px;
+    font-size: 13px;
+}
+
+@media (max-width : 991px){
+    #filtres{
+        margin: 0;
+    }
+}
+
 
 #info {
     display: flex;
     height: 24px;
+    margin: 28px 0 37px 10px;
 }
-
 
 #info > div:first-child{
     border: #d9d9d9 solid 1px;
@@ -70,6 +302,16 @@ a:hover{
     border-radius: 15px;
     color: #0065fc;
     font-size: 12px;
+    margin-right: 12px;
+}
+
+#info i{
+    position: relative;
+    top: calc(50% - 7px);
+}
+
+#info > div:last-child{
+    align-self: center;
 }
 
 
@@ -78,7 +320,11 @@ a:hover{
 
 /* BLOC HÉBERGEMENTS/ACTIVITÉS */
 
-#herbergements_populaires > .flex{
+#hebergements_populaires{
+    padding: 0 0 65px;
+}
+
+#hebergements_populaires > .flex{
     display: flex;
     justify-content: space-between;
     padding: 0;
@@ -90,7 +336,7 @@ a:hover{
 }
 
 @media (max-width: 991px) {
-    #herbergements_populaires > .flex{
+    #hebergements_populaires > .flex{
         flex-direction: column-reverse;
     }
 }
@@ -243,6 +489,12 @@ a:hover{
     }
 }
 
+@media (max-width : 768px){
+    .hebergement_img{
+        height: 114px;
+    }
+}
+
 @media (max-width: 576px){
     #hebergements > div:nth-child(2) > .hebergement:nth-child(1) .hebergement_img{
         background-image: url("./imgs/hebergements/4_small/hebergement1.jpg");
@@ -291,26 +543,32 @@ a:hover{
     font-size: 20px;
 }
 
-#populaires a > div{
+#populaires .populaire{
+    display: block;
     margin: 0 39px 33px 37px;
+}
+
+#populaires .populaire > div{
     display: flex;
     background-color: white;
+    box-shadow: 0px 3px 5px rgb(224, 221, 221);
     border-radius: 15px;
+    padding: 5px;
 }
 
 
 .populaire_img{
-    width: 127px;
+    width: 50%;
     height: 134px;
     border-radius: 15px 0 0 15px;
-    margin: 5px;
 }
 
 .populaire_corps{
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 14px 0 9px 21px;
+    margin: 9px 10px 4px 15px;
 }
 
 .populaire_title{
@@ -354,18 +612,23 @@ a:hover{
         margin: 43px 20px 31px;
     }
 
-    #populaires a > div{
+    #populaires .populaire{
         margin: 0 20px 33px;
     }
 
+    #populaires .populaire > div{
+        flex-direction: column;
+    }
+
     .populaire_img{
-        width: 127px;
-        height: 134px;
+        width: 100%;
+        height: 200px;
+        border-radius: 15px 15px 0 0 ;
     }
 
     .populaire_corps{
-        display: block;
-        margin: 15px 5px;
+        margin: 15px 10px 10px;
+        width: auto;
     }
 
     #populaires > .populaire:nth-child(2) .populaire_img{
@@ -389,6 +652,17 @@ a:hover{
 
 
 @media (max-width: 768px) {
+    #populaires .populaire > div{
+        flex-direction: row;
+    }
+
+    .populaire_img{
+        width: 127px;
+        min-width: 127px;
+        height: 134px;
+        border-radius: 15px  0 0 15px;
+    }
+
     #populaires > .populaire:nth-child(2) .populaire_img{
         background-image: url("./imgs/populaire/4_small/populaire1.jpg");
         background-position: center;
@@ -411,10 +685,6 @@ a:hover{
 
 
 /* BLOC ACTIVITÉ */
-
-#activites{
-    padding: 65px 0 0;
-}
 
 #activites h2{
     font-size: 16px;

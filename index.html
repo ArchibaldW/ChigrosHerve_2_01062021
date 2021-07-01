@@ -10,13 +10,13 @@
 
     <body>
         <header>
-            <nav>
-                <a href=""><img src="imgs/Logo_Reservia.png"></a>
+            <nav class="flex">
+                <div><a href=""><img src="imgs/Logo_Reservia.png"></a></div>
+                <div><a href="">S'inscrire</a></div>
                 <div>
-                    <a href="#hebergements">Hébergemnts</a>
-                    <a href="#activites">Activités</a>
+                    <a href="#hebergements"><div>Hébergements</div></a>
+                    <a href="#activites"><div>Activités</div></a>
                 </div>
-                <a href="">S'inscrire</a>
             </nav>
         </header>
 
@@ -27,25 +27,59 @@
                     <p>En plein centre ville ou en pleine nature</p>
                 </div>
                 <div id="search">
-                    <form method="post" action="">
-                            <label for="location"><i class="fas fa-map-marker-alt"></i></label>
-                            <input type="search" name="location" id="location" value="Marseille, France">
-                            <input type="button" value="Rechercher">
+                    <form method="post" action="" class="flex">
+                        <div class="flex"><label for="location"><i class="fas fa-map-marker-alt"></i></label></div>
+                        <div><input type="search" name="location" id="location" value="Marseille, France"></div>
+                        <div>
+                            <button class="favorite styled"type="button">
+                                <span>Rechercher</span><i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
-                <div id="filtres">
-                    <strong>Filtres</strong>
-                    <span><i class="fas fa-money-bill-wave"></i>Économique</span>
-                    <span><i class="fas fa-child"></i>Familial</span>
-                    <span><i class="fas fa-heart"></i>Romantique</span>
-                    <span><i class="fas fa-dog"></i>Animaux autorisés</span>
-                </div>
+                <div id="filtres" class="flex">
+                    <div>Filtres</div>
+                    <div class="flex">
+                        <div class="filtre">
+                            <a class="flex">
+                                <div>
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div>Économique</div>
+                            </a>
+                        </div>
+                        <div class="filtre">
+                            <a class="flex">
+                                <div>
+                                    <i class="fas fa-child"></i>
+                                </div>
+                                <div>Familial</div>
+                            </a>
+                        </div>
+                        <div class="filtre">
+                            <a class="flex">
+                                <div>
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div>Romantique</div>
+                            </a>
+                        </div>
+                        <div class="filtre">
+                            <a class="flex">
+                                <div>
+                                    <i class="fas fa-dog"></i>
+                                </div>
+                                <div>Animaux autorisés</div>
+                            </a>
+                        </div>
+                    </div>
+            </div>
                 <div id="info">
                     <div><i class="fas fa-info"></i></div><div>Plus de 500 logements sont diponibles dans cette ville</div>
                 </div>
             </div>
 
-            <div id="herbergements_populaires">
+            <div id="hebergements_populaires">
                 <div class="flex">
                     <div id="hebergements">
                         <h2>Hébergements à Marseille</h2>
@@ -154,7 +188,7 @@
                                 <div class="populaire_img"></div>
                                 <div class="populaire_corps">
                                     <div>
-                                        <h3 class="populaire_title">Au coeur de l'eau<br>Chambres d'hôtes</h3>
+                                        <h3 class="populaire_title">Au coeur de l'eau Chambres d'hôtes</h3>
                                         <div class="populaire_txt">Nuit à partie de 71€</div>
                                     </div>
                                     <div class="populaire_stars">
